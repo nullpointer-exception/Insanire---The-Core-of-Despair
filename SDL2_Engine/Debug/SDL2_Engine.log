@@ -1,0 +1,126 @@
+﻿  World.cpp
+  Time.cpp
+  TexturedEntity.cpp
+  Texture.cpp
+c:\users\maste\desktop\sdl2-master\sdl2_engine\texture.h(3): warning C4099: "SDL_Texture": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
+  c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_render.h(128): note: Siehe Deklaration von "SDL_Texture"
+c:\users\maste\desktop\sdl2-master\sdl2_engine\renderer.h(5): warning C4099: "SDL_Window": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
+  c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_video.h(90): note: Siehe Deklaration von "SDL_Window"
+c:\users\maste\desktop\sdl2-master\sdl2_engine\renderer.h(6): warning C4099: "SDL_Renderer": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
+  c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_render.h(122): note: Siehe Deklaration von "SDL_Renderer"
+  Text.cpp
+c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_surface.h(70): warning C4099: "SDL_Surface": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+  c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_surface.h(69): note: Siehe Deklaration von "SDL_Surface"
+c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_render.h(127): warning C4099: "SDL_Texture": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+  c:\users\maste\desktop\sdl2-master\sdl2_engine\text.h(7): note: Siehe Deklaration von "SDL_Texture"
+c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_render.h(128): warning C4099: "SDL_Texture": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+  c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_render.h(127): note: Siehe Deklaration von "SDL_Texture"
+c:\users\maste\desktop\sdl2-master\sdl2_engine\renderer.h(5): warning C4099: "SDL_Window": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
+  c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_video.h(90): note: Siehe Deklaration von "SDL_Window"
+c:\users\maste\desktop\sdl2-master\sdl2_engine\renderer.h(6): warning C4099: "SDL_Renderer": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
+  c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_render.h(122): note: Siehe Deklaration von "SDL_Renderer"
+  Scene.cpp
+  Renderer.cpp
+c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_video.h(90): warning C4099: "SDL_Window": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+  c:\users\maste\desktop\sdl2-master\sdl2_engine\renderer.h(5): note: Siehe Deklaration von "SDL_Window"
+c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_render.h(121): warning C4099: "SDL_Renderer": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+  c:\users\maste\desktop\sdl2-master\sdl2_engine\renderer.h(6): note: Siehe Deklaration von "SDL_Renderer"
+c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_render.h(122): warning C4099: "SDL_Renderer": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+  c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_render.h(121): note: Siehe Deklaration von "SDL_Renderer"
+c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_render.h(127): warning C4099: "SDL_Texture": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+  c:\users\maste\desktop\sdl2-master\sdl2_engine\texture.h(3): note: Siehe Deklaration von "SDL_Texture"
+c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_render.h(128): warning C4099: "SDL_Texture": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+  c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_render.h(127): note: Siehe Deklaration von "SDL_Texture"
+  Rect.cpp
+  Player.cpp
+c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_surface.h(70): warning C4099: "SDL_Surface": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+  c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_surface.h(69): note: Siehe Deklaration von "SDL_Surface"
+c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_video.h(90): warning C4099: "SDL_Window": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+  c:\users\maste\desktop\sdl2-master\sdl2_engine\engine.h(4): note: Siehe Deklaration von "SDL_Window"
+c:\users\maste\desktop\sdl2-master\sdl2_engine\texture.h(3): warning C4099: "SDL_Texture": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
+  c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_render.h(128): note: Siehe Deklaration von "SDL_Texture"
+c:\users\maste\desktop\sdl2-master\sdl2_engine\player.cpp(133): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+c:\users\maste\desktop\sdl2-master\sdl2_engine\player.cpp(146): warning C4244: "=": Konvertierung von "float" in "int", möglicher Datenverlust
+c:\users\maste\desktop\sdl2-master\sdl2_engine\player.cpp(212): warning C4244: "+=": Konvertierung von "float" in "int", möglicher Datenverlust
+c:\users\maste\desktop\sdl2-master\sdl2_engine\player.cpp(213): warning C4244: "+=": Konvertierung von "float" in "int", möglicher Datenverlust
+  Pickup.cpp
+  Physics.cpp
+  MenuScene.cpp
+c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_surface.h(70): warning C4099: "SDL_Surface": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+  c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_surface.h(69): note: Siehe Deklaration von "SDL_Surface"
+c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_render.h(127): warning C4099: "SDL_Texture": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+  c:\users\maste\desktop\sdl2-master\sdl2_engine\text.h(7): note: Siehe Deklaration von "SDL_Texture"
+c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_render.h(128): warning C4099: "SDL_Texture": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+  c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_render.h(127): note: Siehe Deklaration von "SDL_Texture"
+  MenuPlayer.cpp
+c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_surface.h(70): warning C4099: "SDL_Surface": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+  c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_surface.h(69): note: Siehe Deklaration von "SDL_Surface"
+c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_render.h(127): warning C4099: "SDL_Texture": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+  c:\users\maste\desktop\sdl2-master\sdl2_engine\text.h(7): note: Siehe Deklaration von "SDL_Texture"
+c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_render.h(128): warning C4099: "SDL_Texture": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+  c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_render.h(127): note: Siehe Deklaration von "SDL_Texture"
+c:\users\maste\desktop\sdl2-master\sdl2_engine\engine.h(4): warning C4099: "SDL_Window": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
+  c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_video.h(90): note: Siehe Deklaration von "SDL_Window"
+c:\users\maste\desktop\sdl2-master\sdl2_engine\engine.h(5): warning C4099: "SDL_Surface": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
+  c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_surface.h(70): note: Siehe Deklaration von "SDL_Surface"
+  MainScene.cpp
+c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_surface.h(70): warning C4099: "SDL_Surface": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+  c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_surface.h(69): note: Siehe Deklaration von "SDL_Surface"
+c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_video.h(90): warning C4099: "SDL_Window": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+  c:\users\maste\desktop\sdl2-master\sdl2_engine\engine.h(4): note: Siehe Deklaration von "SDL_Window"
+c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_render.h(121): warning C4099: "SDL_Renderer": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+  c:\users\maste\desktop\sdl2-master\sdl2_engine\renderer.h(6): note: Siehe Deklaration von "SDL_Renderer"
+c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_render.h(122): warning C4099: "SDL_Renderer": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+  c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_render.h(121): note: Siehe Deklaration von "SDL_Renderer"
+c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_render.h(127): warning C4099: "SDL_Texture": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+  c:\users\maste\desktop\sdl2-master\sdl2_engine\text.h(7): note: Siehe Deklaration von "SDL_Texture"
+c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_render.h(128): warning C4099: "SDL_Texture": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+  c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_render.h(127): note: Siehe Deklaration von "SDL_Texture"
+  main.cpp
+c:\users\maste\desktop\sdl2-master\sdl2_engine\engine.h(4): warning C4099: "SDL_Window": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
+  c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_video.h(90): note: Siehe Deklaration von "SDL_Window"
+c:\users\maste\desktop\sdl2-master\sdl2_engine\engine.h(5): warning C4099: "SDL_Surface": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
+  c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_surface.h(70): note: Siehe Deklaration von "SDL_Surface"
+  Input.cpp
+  Helper.cpp
+  Font.cpp
+  FollowEntity.cpp
+  Engine.cpp
+c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_surface.h(70): warning C4099: "SDL_Surface": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+  c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_surface.h(69): note: Siehe Deklaration von "SDL_Surface"
+c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_video.h(90): warning C4099: "SDL_Window": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
+  c:\users\maste\desktop\sdl2-master\sdl2_engine\engine.h(4): note: Siehe Deklaration von "SDL_Window"
+c:\users\maste\desktop\sdl2-master\sdl2_engine\renderer.h(6): warning C4099: "SDL_Renderer": Geben Sie den zuerst unter Verwendung von "struct" und jetzt unter Verwendung von "class" gesehenen Namen ein
+  c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_render.h(122): note: Siehe Deklaration von "SDL_Renderer"
+  Code wird generiert...
+  Kompilieren...
+  Enemy.cpp
+c:\users\maste\desktop\sdl2-master\sdl2_engine\enemy.cpp(114): warning C4244: "+=": Konvertierung von "float" in "int", möglicher Datenverlust
+c:\users\maste\desktop\sdl2-master\sdl2_engine\enemy.cpp(115): warning C4244: "+=": Konvertierung von "float" in "int", möglicher Datenverlust
+  Color.cpp
+  Bullet.cpp
+  Actor.cpp
+  Code wird generiert...
+  SDL2_Engine.vcxproj -> C:\Users\maste\Desktop\SDL2-master\Build\bin\x86\Debug\SDL2_Engine.exe
+  SDL2_Engine.vcxproj -> C:\Users\maste\Desktop\SDL2-master\Build\bin\x86\Debug\SDL2_Engine.pdb (Partial PDB)
+  C:\Users\maste\Desktop\SDL2-master\Library\SDL2\lib\x86\SDL2.dll
+  1 Datei(en) kopiert
+  C:\Users\maste\Desktop\SDL2-master\Library\SDL2_ttf\lib\x86\libfreetype-6.dll
+  C:\Users\maste\Desktop\SDL2-master\Library\SDL2_ttf\lib\x86\SDL2_ttf.dll
+  C:\Users\maste\Desktop\SDL2-master\Library\SDL2_ttf\lib\x86\zlib1.dll
+  3 Datei(en) kopiert
+  C:\Users\maste\Desktop\SDL2-master\Library\SDL2_mixer\lib\x86\libFLAC-8.dll
+  C:\Users\maste\Desktop\SDL2-master\Library\SDL2_mixer\lib\x86\libmodplug-1.dll
+  C:\Users\maste\Desktop\SDL2-master\Library\SDL2_mixer\lib\x86\libmpg123-0.dll
+  C:\Users\maste\Desktop\SDL2-master\Library\SDL2_mixer\lib\x86\libogg-0.dll
+  C:\Users\maste\Desktop\SDL2-master\Library\SDL2_mixer\lib\x86\libvorbis-0.dll
+  C:\Users\maste\Desktop\SDL2-master\Library\SDL2_mixer\lib\x86\libvorbisfile-3.dll
+  C:\Users\maste\Desktop\SDL2-master\Library\SDL2_mixer\lib\x86\SDL2_mixer.dll
+  7 Datei(en) kopiert
+  C:\Users\maste\Desktop\SDL2-master\Library\SDL2_image\lib\x86\libjpeg-9.dll
+  C:\Users\maste\Desktop\SDL2-master\Library\SDL2_image\lib\x86\libpng16-16.dll
+  C:\Users\maste\Desktop\SDL2-master\Library\SDL2_image\lib\x86\libtiff-5.dll
+  C:\Users\maste\Desktop\SDL2-master\Library\SDL2_image\lib\x86\libwebp-7.dll
+  C:\Users\maste\Desktop\SDL2-master\Library\SDL2_image\lib\x86\SDL2_image.dll
+  C:\Users\maste\Desktop\SDL2-master\Library\SDL2_image\lib\x86\zlib1.dll
+  6 Datei(en) kopiert
