@@ -20,9 +20,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Actor.cpp" />
-    <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="Animation.cpp" />
+    <ClCompile Include="Boss.cpp" />
     <ClCompile Include="Color.cpp" />
-    <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="FollowEntity.cpp" />
     <ClCompile Include="Font.cpp" />
@@ -30,25 +30,30 @@
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainScene.cpp" />
+    <ClCompile Include="Melee.cpp" />
+    <ClCompile Include="MeleeWeapon.cpp" />
     <ClCompile Include="MenuPlayer.cpp" />
     <ClCompile Include="MenuScene.cpp" />
     <ClCompile Include="Physics.cpp" />
     <ClCompile Include="Pickup.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Ranged.cpp" />
+    <ClCompile Include="RangedWeapon.cpp" />
     <ClCompile Include="Rect.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Text.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="TexturedEntity.cpp" />
+    <ClCompile Include="Background.cpp" />
     <ClCompile Include="Time.cpp" />
     <ClCompile Include="World.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Actor.h" />
-    <ClInclude Include="Bullet.h" />
+    <ClInclude Include="Animation.h" />
+    <ClInclude Include="Boss.h" />
     <ClInclude Include="Color.h" />
-    <ClInclude Include="Enemy.h" />
     <ClInclude Include="Engine.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="FollowEntity.h" />
@@ -57,18 +62,24 @@
     <ClInclude Include="Input.h" />
     <ClInclude Include="Macros.h" />
     <ClInclude Include="MainScene.h" />
+    <ClInclude Include="Melee.h" />
+    <ClInclude Include="MeleeWeapon.h" />
     <ClInclude Include="MenuPlayer.h" />
     <ClInclude Include="MenuScene.h" />
     <ClInclude Include="Physics.h" />
     <ClInclude Include="Pickup.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="Ranged.h" />
+    <ClInclude Include="RangedWeapon.h" />
     <ClInclude Include="Rect.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Text.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="TexturedEntity.h" />
+    <ClInclude Include="Background.h" />
     <ClInclude Include="Time.h" />
+    <ClInclude Include="Vector2.h" />
     <ClInclude Include="World.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -227,5 +238,54 @@ xcopy "$(SolutionDir)Library\SDL2_image\lib\$(PlatformShortName)\*.dll" "$(Solut
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\libjpeg.redist.9.2.0.1\build\native\libjpeg.redist.targets" Condition="Exists('..\packages\libjpeg.redist.9.2.0.1\build\native\libjpeg.redist.targets')" />
+    <Import Project="..\packages\libjpeg.9.2.0.1\build\native\libjpeg.targets" Condition="Exists('..\packages\libjpeg.9.2.0.1\build\native\libjpeg.targets')" />
+    <Import Project="..\packages\zlib.v120.windesktop.msvcstl.dyn.rt-dyn.1.2.8.8\build\native\zlib.v120.windesktop.msvcstl.dyn.rt-dyn.targets" Condition="Exists('..\packages\zlib.v120.windesktop.msvcstl.dyn.rt-dyn.1.2.8.8\build\native\zlib.v120.windesktop.msvcstl.dyn.rt-dyn.targets')" />
+    <Import Project="..\packages\zlib.v140.windesktop.msvcstl.dyn.rt-dyn.1.2.8.8\build\native\zlib.v140.windesktop.msvcstl.dyn.rt-dyn.targets" Condition="Exists('..\packages\zlib.v140.windesktop.msvcstl.dyn.rt-dyn.1.2.8.8\build\native\zlib.v140.windesktop.msvcstl.dyn.rt-dyn.targets')" />
+    <Import Project="..\packages\libmorda.0.5.70\build\native\libmorda.targets" Condition="Exists('..\packages\libmorda.0.5.70\build\native\libmorda.targets')" />
+    <Import Project="..\packages\freetype.redist.2.8.0.1\build\native\freetype.redist.targets" Condition="Exists('..\packages\freetype.redist.2.8.0.1\build\native\freetype.redist.targets')" />
+    <Import Project="..\packages\freetype.2.8.0.1\build\native\freetype.targets" Condition="Exists('..\packages\freetype.2.8.0.1\build\native\freetype.targets')" />
+    <Import Project="..\packages\libpng.redist.1.6.28.1\build\native\libpng.redist.targets" Condition="Exists('..\packages\libpng.redist.1.6.28.1\build\native\libpng.redist.targets')" />
+    <Import Project="..\packages\libutki.1.1.15\build\native\libutki.targets" Condition="Exists('..\packages\libutki.1.1.15\build\native\libutki.targets')" />
+    <Import Project="..\packages\libkolme.1.0.12\build\native\libkolme.targets" Condition="Exists('..\packages\libkolme.1.0.12\build\native\libkolme.targets')" />
+    <Import Project="..\packages\libpapki.1.0.43\build\native\libpapki.targets" Condition="Exists('..\packages\libpapki.1.0.43\build\native\libpapki.targets')" />
+    <Import Project="..\packages\libunikod.2.0.17\build\native\libunikod.targets" Condition="Exists('..\packages\libunikod.2.0.17\build\native\libunikod.targets')" />
+    <Import Project="..\packages\libstob.3.3.16\build\native\libstob.targets" Condition="Exists('..\packages\libstob.3.3.16\build\native\libstob.targets')" />
+    <Import Project="..\packages\libsvgdom.0.3.14\build\native\libsvgdom.targets" Condition="Exists('..\packages\libsvgdom.0.3.14\build\native\libsvgdom.targets')" />
+    <Import Project="..\packages\pixman_static.0.32.4.4\build\native\pixman_static.targets" Condition="Exists('..\packages\pixman_static.0.32.4.4\build\native\pixman_static.targets')" />
+    <Import Project="..\packages\pugixml.1.8.5\build\native\pugixml.targets" Condition="Exists('..\packages\pugixml.1.8.5\build\native\pugixml.targets')" />
+    <Import Project="..\packages\libpng.1.6.28.1\build\native\libpng.targets" Condition="Exists('..\packages\libpng.1.6.28.1\build\native\libpng.targets')" />
+    <Import Project="..\packages\cairo_static.1.15.4.1\build\native\cairo_static.targets" Condition="Exists('..\packages\cairo_static.1.15.4.1\build\native\cairo_static.targets')" />
+    <Import Project="..\packages\libsvgren.0.4.47\build\native\libsvgren.targets" Condition="Exists('..\packages\libsvgren.0.4.47\build\native\libsvgren.targets')" />
+    <Import Project="..\packages\libmikroxml.0.1.3\build\native\libmikroxml.targets" Condition="Exists('..\packages\libmikroxml.0.1.3\build\native\libmikroxml.targets')" />
+    <Import Project="..\packages\QtCharts.redist.5.7.0\build\native\QtCharts.redist.targets" Condition="Exists('..\packages\QtCharts.redist.5.7.0\build\native\QtCharts.redist.targets')" />
+    <Import Project="..\packages\QtCharts.5.7.0\build\native\QtCharts.targets" Condition="Exists('..\packages\QtCharts.5.7.0\build\native\QtCharts.targets')" />
   </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Dieses Projekt verweist auf mindestens ein NuGet-Paket, das auf diesem Computer fehlt. Verwenden Sie die Wiederherstellung von NuGet-Paketen, um die fehlenden Dateien herunterzuladen. Weitere Informationen finden Sie unter "http://go.microsoft.com/fwlink/?LinkID=322105". Die fehlende Datei ist "{0}".</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\libjpeg.redist.9.2.0.1\build\native\libjpeg.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\libjpeg.redist.9.2.0.1\build\native\libjpeg.redist.targets'))" />
+    <Error Condition="!Exists('..\packages\libjpeg.9.2.0.1\build\native\libjpeg.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\libjpeg.9.2.0.1\build\native\libjpeg.targets'))" />
+    <Error Condition="!Exists('..\packages\zlib.v120.windesktop.msvcstl.dyn.rt-dyn.1.2.8.8\build\native\zlib.v120.windesktop.msvcstl.dyn.rt-dyn.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\zlib.v120.windesktop.msvcstl.dyn.rt-dyn.1.2.8.8\build\native\zlib.v120.windesktop.msvcstl.dyn.rt-dyn.targets'))" />
+    <Error Condition="!Exists('..\packages\zlib.v140.windesktop.msvcstl.dyn.rt-dyn.1.2.8.8\build\native\zlib.v140.windesktop.msvcstl.dyn.rt-dyn.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\zlib.v140.windesktop.msvcstl.dyn.rt-dyn.1.2.8.8\build\native\zlib.v140.windesktop.msvcstl.dyn.rt-dyn.targets'))" />
+    <Error Condition="!Exists('..\packages\libmorda.0.5.70\build\native\libmorda.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\libmorda.0.5.70\build\native\libmorda.targets'))" />
+    <Error Condition="!Exists('..\packages\freetype.redist.2.8.0.1\build\native\freetype.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\freetype.redist.2.8.0.1\build\native\freetype.redist.targets'))" />
+    <Error Condition="!Exists('..\packages\freetype.2.8.0.1\build\native\freetype.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\freetype.2.8.0.1\build\native\freetype.targets'))" />
+    <Error Condition="!Exists('..\packages\libpng.redist.1.6.28.1\build\native\libpng.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\libpng.redist.1.6.28.1\build\native\libpng.redist.targets'))" />
+    <Error Condition="!Exists('..\packages\libutki.1.1.15\build\native\libutki.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\libutki.1.1.15\build\native\libutki.targets'))" />
+    <Error Condition="!Exists('..\packages\libkolme.1.0.12\build\native\libkolme.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\libkolme.1.0.12\build\native\libkolme.targets'))" />
+    <Error Condition="!Exists('..\packages\libpapki.1.0.43\build\native\libpapki.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\libpapki.1.0.43\build\native\libpapki.targets'))" />
+    <Error Condition="!Exists('..\packages\libunikod.2.0.17\build\native\libunikod.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\libunikod.2.0.17\build\native\libunikod.targets'))" />
+    <Error Condition="!Exists('..\packages\libstob.3.3.16\build\native\libstob.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\libstob.3.3.16\build\native\libstob.targets'))" />
+    <Error Condition="!Exists('..\packages\libsvgdom.0.3.14\build\native\libsvgdom.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\libsvgdom.0.3.14\build\native\libsvgdom.targets'))" />
+    <Error Condition="!Exists('..\packages\pixman_static.0.32.4.4\build\native\pixman_static.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\pixman_static.0.32.4.4\build\native\pixman_static.targets'))" />
+    <Error Condition="!Exists('..\packages\pugixml.1.8.5\build\native\pugixml.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\pugixml.1.8.5\build\native\pugixml.targets'))" />
+    <Error Condition="!Exists('..\packages\libpng.1.6.28.1\build\native\libpng.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\libpng.1.6.28.1\build\native\libpng.targets'))" />
+    <Error Condition="!Exists('..\packages\cairo_static.1.15.4.1\build\native\cairo_static.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cairo_static.1.15.4.1\build\native\cairo_static.targets'))" />
+    <Error Condition="!Exists('..\packages\libsvgren.0.4.47\build\native\libsvgren.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\libsvgren.0.4.47\build\native\libsvgren.targets'))" />
+    <Error Condition="!Exists('..\packages\libmikroxml.0.1.3\build\native\libmikroxml.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\libmikroxml.0.1.3\build\native\libmikroxml.targets'))" />
+    <Error Condition="!Exists('..\packages\QtCharts.redist.5.7.0\build\native\QtCharts.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\QtCharts.redist.5.7.0\build\native\QtCharts.redist.targets'))" />
+    <Error Condition="!Exists('..\packages\QtCharts.5.7.0\build\native\QtCharts.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\QtCharts.5.7.0\build\native\QtCharts.targets'))" />
+  </Target>
 </Project>

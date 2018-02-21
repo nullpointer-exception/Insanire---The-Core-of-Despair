@@ -1,36 +1,25 @@
-﻿  MainScene.cpp
-c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_surface.h(70): warning C4099: "SDL_Surface": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
-  c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_surface.h(69): note: Siehe Deklaration von "SDL_Surface"
-c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_video.h(90): warning C4099: "SDL_Window": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
-  c:\users\maste\desktop\sdl2-master\sdl2_engine\engine.h(4): note: Siehe Deklaration von "SDL_Window"
-c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_render.h(121): warning C4099: "SDL_Renderer": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
-  c:\users\maste\desktop\sdl2-master\sdl2_engine\renderer.h(6): note: Siehe Deklaration von "SDL_Renderer"
-c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_render.h(122): warning C4099: "SDL_Renderer": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
-  c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_render.h(121): note: Siehe Deklaration von "SDL_Renderer"
-c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_render.h(127): warning C4099: "SDL_Texture": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
-  c:\users\maste\desktop\sdl2-master\sdl2_engine\text.h(7): note: Siehe Deklaration von "SDL_Texture"
-c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_render.h(128): warning C4099: "SDL_Texture": Geben Sie den zuerst unter Verwendung von "class" und jetzt unter Verwendung von "struct" gesehenen Namen ein
-  c:\users\maste\desktop\sdl2-master\library\sdl2\include\sdl_render.h(127): note: Siehe Deklaration von "SDL_Texture"
-  SDL2_Engine.vcxproj -> C:\Users\maste\Desktop\SDL2-master\Build\bin\x64\Debug\SDL2_Engine.exe
-  SDL2_Engine.vcxproj -> C:\Users\maste\Desktop\SDL2-master\Build\bin\x64\Debug\SDL2_Engine.pdb (Partial PDB)
-  C:\Users\maste\Desktop\SDL2-master\Library\SDL2\lib\x64\SDL2.dll
+﻿  World.cpp
+c:\sae\minigame\sdl2_engine\world.cpp(14): warning C4267: "Initialisierung": Konvertierung von "size_t" nach "int", Datenverlust möglich
+  SDL2_Engine.vcxproj -> C:\SAE\Minigame\Build\bin\x64\Debug\SDL2_Engine.exe
+  SDL2_Engine.vcxproj -> C:\SAE\Minigame\Build\bin\x64\Debug\SDL2_Engine.pdb (Partial PDB)
+  C:\SAE\Minigame\Library\SDL2\lib\x64\SDL2.dll
   1 Datei(en) kopiert
-  C:\Users\maste\Desktop\SDL2-master\Library\SDL2_ttf\lib\x64\libfreetype-6.dll
-  C:\Users\maste\Desktop\SDL2-master\Library\SDL2_ttf\lib\x64\SDL2_ttf.dll
-  C:\Users\maste\Desktop\SDL2-master\Library\SDL2_ttf\lib\x64\zlib1.dll
+  C:\SAE\Minigame\Library\SDL2_ttf\lib\x64\libfreetype-6.dll
+  C:\SAE\Minigame\Library\SDL2_ttf\lib\x64\SDL2_ttf.dll
+  C:\SAE\Minigame\Library\SDL2_ttf\lib\x64\zlib1.dll
   3 Datei(en) kopiert
-  C:\Users\maste\Desktop\SDL2-master\Library\SDL2_mixer\lib\x64\libFLAC-8.dll
-  C:\Users\maste\Desktop\SDL2-master\Library\SDL2_mixer\lib\x64\libmodplug-1.dll
-  C:\Users\maste\Desktop\SDL2-master\Library\SDL2_mixer\lib\x64\libmpg123-0.dll
-  C:\Users\maste\Desktop\SDL2-master\Library\SDL2_mixer\lib\x64\libogg-0.dll
-  C:\Users\maste\Desktop\SDL2-master\Library\SDL2_mixer\lib\x64\libvorbis-0.dll
-  C:\Users\maste\Desktop\SDL2-master\Library\SDL2_mixer\lib\x64\libvorbisfile-3.dll
-  C:\Users\maste\Desktop\SDL2-master\Library\SDL2_mixer\lib\x64\SDL2_mixer.dll
+  C:\SAE\Minigame\Library\SDL2_mixer\lib\x64\libFLAC-8.dll
+  C:\SAE\Minigame\Library\SDL2_mixer\lib\x64\libmodplug-1.dll
+  C:\SAE\Minigame\Library\SDL2_mixer\lib\x64\libmpg123-0.dll
+  C:\SAE\Minigame\Library\SDL2_mixer\lib\x64\libogg-0.dll
+  C:\SAE\Minigame\Library\SDL2_mixer\lib\x64\libvorbis-0.dll
+  C:\SAE\Minigame\Library\SDL2_mixer\lib\x64\libvorbisfile-3.dll
+  C:\SAE\Minigame\Library\SDL2_mixer\lib\x64\SDL2_mixer.dll
   7 Datei(en) kopiert
-  C:\Users\maste\Desktop\SDL2-master\Library\SDL2_image\lib\x64\libjpeg-9.dll
-  C:\Users\maste\Desktop\SDL2-master\Library\SDL2_image\lib\x64\libpng16-16.dll
-  C:\Users\maste\Desktop\SDL2-master\Library\SDL2_image\lib\x64\libtiff-5.dll
-  C:\Users\maste\Desktop\SDL2-master\Library\SDL2_image\lib\x64\libwebp-7.dll
-  C:\Users\maste\Desktop\SDL2-master\Library\SDL2_image\lib\x64\SDL2_image.dll
-  C:\Users\maste\Desktop\SDL2-master\Library\SDL2_image\lib\x64\zlib1.dll
+  C:\SAE\Minigame\Library\SDL2_image\lib\x64\libjpeg-9.dll
+  C:\SAE\Minigame\Library\SDL2_image\lib\x64\libpng16-16.dll
+  C:\SAE\Minigame\Library\SDL2_image\lib\x64\libtiff-5.dll
+  C:\SAE\Minigame\Library\SDL2_image\lib\x64\libwebp-7.dll
+  C:\SAE\Minigame\Library\SDL2_image\lib\x64\SDL2_image.dll
+  C:\SAE\Minigame\Library\SDL2_image\lib\x64\zlib1.dll
   6 Datei(en) kopiert

@@ -148,7 +148,7 @@ void World::RenderEntities(Renderer * _pRenderer, int _playerPosX, int _playerPo
 
 			// set destination rect
 			destination.x = realX * 64;
-			destination.y = (posY + y) * 64;
+			destination.y = realY * 64;
 			destination.h = 64;
 			destination.w = 64;
 

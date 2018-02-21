@@ -4,5 +4,6 @@
 #define PLAYER_WIDTH_HEIGHT 64
 
 // tags
-#define ENEMY "Enemy"
+#define RANGED "Ranged"
+#define MELEE "Melee"
 #define PLAYER "Player"

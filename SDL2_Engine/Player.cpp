@@ -3,10 +3,12 @@
 #include "Rect.h"
 #include "Physics.h"
 #include "Scene.h"
-#include "Bullet.h"
+#include "RangedWeapon.h"
+#include "MeleeWeapon.h"
 #include "Helper.h"
 #include "Texture.h"
-#include "Enemy.h"
+#include "Ranged.h"
+#include "Melee.h"
 
 Player::Player(Renderer * _pRenderer, const char * _pFileName, Rect * _pRect, 
 	const char* _pFileHealthBar, const char* _pRunBar)
@@ -130,7 +132,7 @@ void Player::Update(float _deltaTime)
 	Rect rect = *m_pHealthBar->GetRect();
 
 	// set width
-	rect.w = 64 * (m_health / 100.0f);
+	rect.h = 64 * (m_health / 100.0f);
 
 	// set rect x and y
 	rect.x = m_pRect->x;
@@ -143,7 +145,7 @@ void Player::Update(float _deltaTime)
 	Rect rectRun = *m_pRunBar->GetRect();
 
 	// set width
-	rectRun.w = 64 * (m_xrun / 100.0f);
+	rectRun.h = 64 * (m_xrun / 100.0f);
 
 	// set rect x and y
 	rectRun.x = m_pRect->x;
@@ -261,13 +263,14 @@ void Player::CheckMoveable(std::list<TexturedEntity*> _pEntities, float _deltaTi
 		// if player hits
 		if (m_playerHits)
 		{
-			if (entity->GetTag() != "Enemy")
+			if (entity->GetTag() != "Ranged" || entity->GetTag() != "Melee")
 				continue;
 
 			// if hit rect collides with entity
 			if (Physics::RectRectCollision(&rect, entity->GetRect()))
 			{
-				((Enemy*)entity)->TakeDamage(25);
+				((Ranged*)entity)->TakeDamage(25);
+				((Melee*)entity)->TakeDamage(25);
 			}
 		}
 	}

@@ -26,7 +26,7 @@ bool Engine::Init()
 
 	// create window
 	m_pWindow = SDL_CreateWindow(
-		"SDL2 Engine",
+		"Insanire - The Core of Despair",
 		SDL_WINDOWPOS_CENTERED,
 		SDL_WINDOWPOS_CENTERED,
 		SCREEN_WIDTH,

@@ -4,7 +4,8 @@
 #include "Rect.h"
 #include "Helper.h"
 #include "Player.h"
-#include "Enemy.h"
+#include "Ranged.h"
+#include "Melee.h"
 #include "Text.h"
 #include "Font.h"
 #include "Color.h"
@@ -14,11 +15,11 @@
 #include "Time.h"
 #include "MenuScene.h"
 #include "Pickup.h"
+#include "Background.h"
 
 MainScene::MainScene(Engine * _pEngine)
 	: Scene(_pEngine)
 {
-	
 }
 
 MainScene::~MainScene()
@@ -30,6 +31,9 @@ void MainScene::Render(Renderer * _pRenderer)
 	// set camera position before rendering anything
 	_pRenderer->m_CameraX = m_pPlayer->GetRect()->x + m_pPlayer->GetRect()->w / 2;
 	_pRenderer->m_CameraY = m_pPlayer->GetRect()->y + m_pPlayer->GetRect()->h / 2;
+
+	// render background
+	m_pBackground->Render(_pRenderer);
 
 	// render world entities
 	m_pWorld->RenderEntities(_pRenderer, m_pPlayer->GetRect()->x, m_pPlayer->GetRect()->y);
@@ -85,11 +89,18 @@ void MainScene::Update(float _deltaTime)
 	// check collision for all entities
 	for each(TexturedEntity* entity in m_pMoveEntities)
 	{
-		// if entity is enemy
-		if (entity->GetTag() == "Enemy")
+		// if entity is ranged
+		if (entity->GetTag() == "Ranged")
 		{
-			((Enemy*)entity)->CheckCollision(m_pMoveEntities, _deltaTime);
-			((Enemy*)entity)->CheckCollision(m_pWorld->GetEntities(), _deltaTime);
+			((Ranged*)entity)->CheckCollision(m_pMoveEntities, _deltaTime);
+			((Ranged*)entity)->CheckCollision(m_pWorld->GetEntities(), _deltaTime);
+		}
+
+		// if entity is melee
+		if (entity->GetTag() == "Melee")
+		{
+			((Melee*)entity)->CheckCollision(m_pMoveEntities, _deltaTime);
+			((Melee*)entity)->CheckCollision(m_pWorld->GetEntities(), _deltaTime);
 		}
 	}
 
@@ -99,14 +110,19 @@ void MainScene::Update(float _deltaTime)
 
 void MainScene::Load(Renderer * _pRenderer)
 {
+	// create background
+	m_pBackground = new Background(_pRenderer,
+		GetAssetPath("Texture/World/Background_Wald2.png", 5).c_str(),
+		new Rect(0, 0, 1280, 720));
+
 	// create player
 	m_pPlayer = new Player(_pRenderer, 
 		GetAssetPath("Texture/Character/T_Character_Idle.png", 5).c_str(), 
-		new Rect(66, 192, 64, 64), GetAssetPath("Texture/Character/T_HealthBar.png", 5).c_str(),
-		GetAssetPath("Texture/Character/T_RunBar.png", 5).c_str());
+		new Rect(66, 192, 64, 64), GetAssetPath("Texture/HealthBar/HP_Full.png", 5).c_str(),
+		GetAssetPath("Texture/HealthBar/Ausdauer_Leiste.png", 5).c_str());
 
 	// set speed
-	m_pPlayer->SetSpeed(100);
+	m_pPlayer->SetSpeed(750);
 
 	// set current scene of player
 	m_pPlayer->SetCurrentScene(this);
@@ -126,51 +142,37 @@ void MainScene::Load(Renderer * _pRenderer)
 	// load world
 	m_pWorld->LoadWorld(_pRenderer);
 
-	// create enemy
-	Enemy* enemy = new Enemy(_pRenderer, GetAssetPath("Texture/Character/T_Enemy_Idle.png", 5).c_str(),
+	// create ranged
+	Ranged* ranged = new Ranged(_pRenderer, GetAssetPath("Texture/Character/T_Enemy_Idle.png", 5).c_str(),
+	new Rect(768, 192, 64, 64), GetAssetPath("Texture/Character/T_HealthBar.png", 5).c_str());
+	
+	//for (int i = 0; i < 5; i++)
+	//{
+	//	if (ranged <= i)
+	//	{
+			// set collision type
+			ranged->SetColType(ECollisionType::MOVE);
+
+			// set player reference
+			ranged->SetPlayer(m_pPlayer);
+
+			// add enemy to list
+			m_pMoveEntities.push_back(ranged);
+	//	}
+	//}
+
+	// create melee
+	Melee* melee = new Melee(_pRenderer, GetAssetPath("Texture/Character/T_Enemy_Idle.png", 5).c_str(),
 		new Rect(768, 192, 64, 64), GetAssetPath("Texture/Character/T_HealthBar.png", 5).c_str());
 
-
-
 	// set collision type
-	enemy->SetColType(ECollisionType::MOVE);
+	melee->SetColType(ECollisionType::MOVE);
 
 	// set player reference
-	enemy->SetPlayer(m_pPlayer);
+	melee->SetPlayer(m_pPlayer);
 
 	// add enemy to list
-	m_pMoveEntities.push_back(enemy);
-
-
-	// create enemy
-	Enemy* enemy2 = new Enemy(_pRenderer, GetAssetPath("Texture/Character/T_Sentry.png", 5).c_str(),
-		new Rect(300, 325, 64, 64), GetAssetPath("Texture/Character/T_HealthBar.png", 5).c_str());
-
-
-	// set collision type
-	enemy2->SetColType(ECollisionType::MOVE);
-
-	// set player reference
-	enemy2->SetPlayer(m_pPlayer);
-
-	// add enemy to list
-	m_pMoveEntities.push_back(enemy2);
-
-	// create enemy
-	Enemy* enemy3 = new Enemy(_pRenderer, GetAssetPath("Texture/Character/T_Enemy_Idle.png", 5).c_str(),
-		new Rect(140, 450, 64, 64), GetAssetPath("Texture/Character/T_HealthBar.png", 5).c_str());
-
-	// set speed
-	enemy3->SetSpeed(0);
-
-	// set collision type
-	enemy3->SetColType(ECollisionType::MOVE);
-
-	// set player reference
-	enemy3->SetPlayer(m_pPlayer);
-
-	// add enemy to list
-	m_pMoveEntities.push_back(enemy3);
+	m_pMoveEntities.push_back(melee);
 
 	// create new pickup
 	Pickup* pickup = new Pickup(_pRenderer, GetAssetPath("Texture/Items/T_Flag.png", 5).c_str(),
@@ -225,6 +227,9 @@ void MainScene::Unload()
 		delete entity;
 	}
 
+	// delete background
+	delete m_pBackground;
+
 	// delete world
 	delete m_pWorld;
 
@@ -246,23 +251,34 @@ void MainScene::CheckCollision(float _deltaTime)
 	// check all move entities
 	for each (TexturedEntity* entity in m_pMoveEntities)
 	{
-
-		
 		// if bullet
 		if (entity->GetColType() == ECollisionType::BULLET)
 		{
 			// check all move entities
 			for each (TexturedEntity* moveEntity in m_pMoveEntities)
 			{
-				// if bullet is pickup and move entity is enemy
+				// if bullet is pickup and move entity is ranged
 				if (entity->GetTag() == "Pickup" &&
-					moveEntity->GetTag() == ENEMY)
+					moveEntity->GetTag() == RANGED)
 				{
 					// check collision
 					if (Physics::RectRectCollision(entity->GetRect(), moveEntity->GetRect()))
 					{
-						// increase health and add pickuup to remove list
-						((Enemy*)moveEntity)->IncreaseHealth(25);
+						// increase health and add pickup to remove list
+						((Ranged*)moveEntity)->IncreaseHealth(25);
+						m_pEntitiesToRemove.push_back(entity);
+					}
+				}
+
+				// if bullet is pickup and move entity is ranged
+				if (entity->GetTag() == "Pickup" &&
+					moveEntity->GetTag() == MELEE)
+				{
+					// check collision
+					if (Physics::RectRectCollision(entity->GetRect(), moveEntity->GetRect()))
+					{
+						// increase health and add pickup to remove list
+						((Melee*)moveEntity)->IncreaseHealth(25);
 						m_pEntitiesToRemove.push_back(entity);
 					}
 				}
@@ -278,10 +294,17 @@ void MainScene::CheckCollision(float _deltaTime)
 					m_pEntitiesToRemove.push_back(entity);
 
 					// if hitted move entity is enemy
-					if (moveEntity->GetTag() == ENEMY)
+					if (moveEntity->GetTag() == RANGED)
 					{
 						// take damage
-						((Enemy*)moveEntity)->TakeDamage(25);
+						((Ranged*)moveEntity)->TakeDamage(25);
+					}
+
+					// if hitted move entity is enemy
+					if (moveEntity->GetTag() == MELEE)
+					{
+						// take damage
+						((Melee*)moveEntity)->TakeDamage(25);
 					}
 				}
 			}
@@ -301,7 +324,6 @@ void MainScene::CheckCollision(float _deltaTime)
 				}
 			}
 
-			
 			// if bullet hits player
 			if (Physics::RectRectCollision(entity->GetRect(), m_pPlayer->GetRect()))
 			{
@@ -330,41 +352,30 @@ void MainScene::CheckCollision(float _deltaTime)
 				if (m_pPlayer->GetHealth() <= 0)
 					playerDead = true;
 			}
-
-
 		}
-}
-
-	
+}	
 
 	// as long as there is a entity to remove
 	// NO FOR EACH !!!
-
 	while (m_pEntitiesToRemove.size() > 0)
 	{
-
 		// get first entity
 		Entity* entity = m_pEntitiesToRemove.front();
 
-
-
 		// remove entity from entites to remove
 		m_pEntitiesToRemove.remove(entity);
-
-
 
 		// remove entity from move entites
 		m_pMoveEntities.remove((TexturedEntity*)entity);
 	
 		// delete entity
 		delete entity;
-
 		}
+
 		// if player dead change scene
 		if (playerDead)
 		{
 			MenuScene* menuScene = new MenuScene(m_pEngine);
 			m_pEngine->ChangeScene(menuScene);
-
 		}
 	}

@@ -3,6 +3,7 @@
 
 class Player;
 class World;
+class Background;
 
 class MainScene : public Scene
 {
@@ -34,6 +35,9 @@ private:
 
 	// world
 	World* m_pWorld;
+
+	// background
+	Background* m_pBackground;
 
 	// collision and delete of entities
 	void CheckCollision(float _deltaTime);

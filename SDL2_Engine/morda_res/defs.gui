@@ -1,0 +1,199 @@
+defs{
+	morda_color_text{0xffffffff}
+
+	morda_color_bg{0xff353535}
+	morda_color_mg{0xff424242}
+	morda_color_fg{0xff505050}
+}
+
+defs{
+	morda_color_bg_window_title{0xffad9869}
+	morda_color_bg_window_title_nontopmost{@{morda_color_fg}}
+
+	morda_window_border_size{5pt}
+
+	morda_color_highlight{0xffad9869}
+
+//	morda_color_highlight{0xff329ce1}
+
+	Text{
+		Text{
+			color{ @{morda_color_text} }
+		}
+	}
+
+
+	Margins{ left top right bottom weightLeft weightRight weightTop weightBottom
+		Row{
+			Widget{
+				layout{
+					dx{@{left}}
+					weight{@{weightLeft}}
+				}
+			}
+			Column{
+				layout{
+					weight{1} dy{max}
+				}
+				Widget{
+					layout{
+						dy{@{top}}
+						weight{@{weightTop}}
+					}
+				}
+				Pile{
+					layout{
+						weight{1} dx{max}
+					}
+					@{children}
+				}
+				Widget{
+					layout{
+						dy{@{bottom}}
+						weight{@{weightBottom}}
+					}
+				}
+			}
+			Widget{
+				layout{
+					dx{@{right}}
+					weight{@{weightRight}}
+				}
+			}
+		}
+	}
+
+	Left{ layout
+		Row{
+			layout{
+				@{layout}
+				dx{max}
+			}
+
+			@{children}
+
+			Widget{
+				layout{
+					dx{0}
+					weight{1}
+				}
+			}
+		}
+	}
+
+	Right{ layout
+		Row{
+			layout{
+				@{layout}
+				dx{max}
+			}
+
+			Widget{
+				layout{
+					dx{0}
+					weight{1}
+				}
+			}
+
+			@{children}
+		}
+	}
+
+	Top{ layout
+		Column{
+			layout{
+				@{layout}
+				dy{max}
+			}
+
+			@{children}
+
+			Widget{
+				layout{
+					dy{0}
+					weight{1}
+				}
+			}
+		}
+	}
+
+	Bottom{ layout
+		Column{
+			layout{
+				@{layout}
+				dy{max}
+			}
+
+			Widget{
+				layout{
+					dy{0}
+					weight{1}
+				}
+			}
+
+			@{children}
+		}
+	}
+
+	Window{
+		look
+		Window{
+			look{
+				@{look}
+				titleColorTopmost{ @{morda_color_bg_window_title} }
+				titleColorNonTopmost{ @{morda_color_bg_window_title_nontopmost} }
+				background{WindowBackground}
+				left{@{morda_window_border_size}}
+				top{@{morda_window_border_size}}
+				right{@{morda_window_border_size}}
+				bottom{@{morda_window_border_size}}
+			}
+
+			@{children}
+		}
+	}
+
+	PushButton{
+		NinePatchPushButton{
+			@{children}
+		}
+	}
+
+	WindowBackground{
+		NinePatch{
+			layout{dx{fill} dy{fill}}
+
+			image{morda_npt_window_bg}
+
+			left{@{morda_window_border_size}}
+			top{@{morda_window_border_size}}
+			right{@{morda_window_border_size}}
+			bottom{@{morda_window_border_size}}
+		}
+	}
+
+	WindowEmptyBackground{
+		NinePatch{
+			layout{dx{fill} dy{fill}}
+
+			image{morda_npt_window_bg}
+
+			left{@{morda_window_border_size}}
+			top{@{morda_window_border_size}}
+			right{@{morda_window_border_size}}
+			bottom{@{morda_window_border_size}}
+			centerVisible{false}
+		}
+	}
+}
+
+defs{
+	Margin{ value
+		Margins{
+			left{@{value}}
+			top{@{value}}
+			right{@{value}}
+			bottom{@{value}}
+		}
+	}
+}

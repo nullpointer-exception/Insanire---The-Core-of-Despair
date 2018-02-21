@@ -52,6 +52,21 @@
     <Filter Include="Engine\Time">
       <UniqueIdentifier>{28e8b909-711f-4dc5-84de-9d84dfb3ab20}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Animation">
+      <UniqueIdentifier>{7a9ebeca-ed6f-4db9-8d6a-737ec193851a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Entity\Enemy">
+      <UniqueIdentifier>{b2506091-8590-4f17-9efc-a606b9b50f1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Entity\Enemy\Boss">
+      <UniqueIdentifier>{48f5ee3a-1ebb-48a1-926b-6744eebc8a7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Entity\Enemy\Weapons">
+      <UniqueIdentifier>{69e34665-7a01-48ef-a83a-0f9311ae7614}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Background">
+      <UniqueIdentifier>{80b96e61-bb28-44f6-a1cd-816672a5840f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine.cpp">
@@ -109,20 +124,36 @@
     <ClCompile Include="Time.cpp">
       <Filter>Engine\Time</Filter>
     </ClCompile>
-    <ClCompile Include="Bullet.cpp">
-      <Filter>Game\Entity</Filter>
-    </ClCompile>
-    <ClCompile Include="Enemy.cpp">
-      <Filter>Game\Entity</Filter>
-    </ClCompile>
-    <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="MenuScene.cpp">
       <Filter>Game\Scene</Filter>
     </ClCompile>
     <ClCompile Include="MenuPlayer.cpp">
       <Filter>Game\Entity</Filter>
     </ClCompile>
-    <ClCompile Include="Pickup.cpp" />
+    <ClCompile Include="Pickup.cpp">
+      <Filter>Engine\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Melee.cpp">
+      <Filter>Game\Entity\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Ranged.cpp">
+      <Filter>Game\Entity\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation.cpp">
+      <Filter>Engine\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss.cpp">
+      <Filter>Game\Entity\Enemy\Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="MeleeWeapon.cpp">
+      <Filter>Game\Entity\Enemy\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="RangedWeapon.cpp">
+      <Filter>Game\Entity\Enemy\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="Background.cpp">
+      <Filter>Game\Background</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine.h">
@@ -182,22 +213,41 @@
     <ClInclude Include="Time.h">
       <Filter>Engine\Time</Filter>
     </ClInclude>
-    <ClInclude Include="Bullet.h">
-      <Filter>Game\Entity</Filter>
-    </ClInclude>
-    <ClInclude Include="Enemy.h">
-      <Filter>Game\Entity</Filter>
-    </ClInclude>
     <ClInclude Include="Macros.h">
       <Filter>Engine\Helper</Filter>
     </ClInclude>
-    <ClInclude Include="Bullet.h" />
     <ClInclude Include="MenuScene.h">
       <Filter>Game\Scene</Filter>
     </ClInclude>
     <ClInclude Include="MenuPlayer.h">
       <Filter>Game\Entity</Filter>
     </ClInclude>
-    <ClInclude Include="Pickup.h" />
+    <ClInclude Include="Pickup.h">
+      <Filter>Engine\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Melee.h">
+      <Filter>Game\Entity\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Ranged.h">
+      <Filter>Game\Entity\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2.h">
+      <Filter>Engine\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.h">
+      <Filter>Engine\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss.h">
+      <Filter>Game\Entity\Enemy\Boss</Filter>
+    </ClInclude>
+    <ClInclude Include="MeleeWeapon.h">
+      <Filter>Game\Entity\Enemy\Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="RangedWeapon.h">
+      <Filter>Game\Entity\Enemy\Weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="Background.h">
+      <Filter>Game\Background</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

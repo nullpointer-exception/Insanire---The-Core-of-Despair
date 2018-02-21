@@ -31,6 +31,7 @@ public:
 	inline Text* GetEndText() { return m_pEndText; };
 
 private:
+
 	// start game text
 	Text* m_pStartText;
 

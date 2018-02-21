@@ -6,6 +6,8 @@
 #include "Helper.h"
 #include "TexturedEntity.h"
 #include "MenuPlayer.h"
+#include "Texture.h"
+#include "SDL_Image.h"
 
 MenuScene::MenuScene(Engine * _pEngine)
 	: Scene(_pEngine)
@@ -14,6 +16,7 @@ MenuScene::MenuScene(Engine * _pEngine)
 
 MenuScene::~MenuScene()
 {
+
 }
 
 void MenuScene::Update(float _deltaTime)
@@ -28,6 +31,7 @@ void MenuScene::Update(float _deltaTime)
 
 void MenuScene::Render(Renderer * _pRenderer)
 {
+
 	// render texts
 	for each (Text* text in m_pTexts)
 		text->Render(_pRenderer);
@@ -42,6 +46,7 @@ void MenuScene::Render(Renderer * _pRenderer)
 
 void MenuScene::Load(Renderer * _pRenderer)
 {
+	
 	// create start text
 	m_pStartText = new Text(new Rect(600, 300, 80, 24), "Start Game",
 		new Font(GetAssetPath("Texture/Font/T_Arial.ttf", 5).c_str(), 24),
